@@ -28,7 +28,8 @@ func getLength() uint {
 	}
 	return uint(ws.Col)
 }
-//print the incoming string as a GUI in the preferred alignment stated by the user.
+
+// print the incoming string as a GUI in the preferred alignment stated by the user.
 func AsciiArtJustify() {
 	var emptyString string
 	var inputString []string
@@ -94,7 +95,7 @@ func AsciiArtJustify() {
 	// to obtain the length of the bubble word
 	startingPoint := 0
 	justifySpace := 0
-	// justifySpace is to obtain the number of space characters there are in the input string. 
+	// justifySpace is to obtain the number of space characters there are in the input string.
 	// this is necessary for the equation ((length - charlength) / justifySpace) so that
 	//the appropriate number of spaces is add after each space character to fill the terminal size.
 	var ind []int
@@ -103,7 +104,7 @@ func AsciiArtJustify() {
 		for j, str := range inputString {
 			for g, aRune := range str {
 				if aRune == 32 {
-					ind=append(ind, (g+1))
+					ind = append(ind, (g + 1))
 					justifySpace++
 
 				}
@@ -131,10 +132,13 @@ func AsciiArtJustify() {
 						}
 						fmt.Print(char[i])
 					} else if alignFlag[1] == "justify" {
-						startingPoint = ((length - charlength) / justifySpace)
-						for _,s:=range ind{
+						if justifySpace != 0 {
+							startingPoint = ((length - charlength) / justifySpace)
+						}
+
+						for _, s := range ind {
 							//this print the appropriate number of space after the bubble space character
-							if estrCount== s{
+							if estrCount == s {
 								for l := 0; l < startingPoint; l++ {
 									fmt.Printf(" ")
 								}

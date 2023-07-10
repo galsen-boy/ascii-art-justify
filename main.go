@@ -13,18 +13,18 @@ import (
 func main() {
 
 	if len(os.Args) == 2 || len(os.Args) > 4 {
-		if strings.HasPrefix( os.Args[1], "--color") {
+		if strings.HasPrefix(os.Args[1], "--color") {
 			utility.PrintErrColor()
 			return
 		}
-		if strings.HasPrefix( os.Args[1], "--output") {
+		if strings.HasPrefix(os.Args[1], "--output") {
 			utility.PrinterrOutput()
 			return
 		}
-		if strings.HasPrefix( os.Args[1], "--align") {
+		if strings.HasPrefix(os.Args[1], "--align") {
 			utility.PrintErrjustify()
 			return
-		}else {
+		} else {
 			utility.AsciiArt()
 			return
 		}
@@ -52,12 +52,12 @@ func main() {
 	if len(os.Args) == 4 && strings.HasPrefix(os.Args[1], "--color=") {
 		AsciiArtColor()
 		return
-	} 
+	}
 	if len(os.Args) == 4 && strings.HasPrefix(os.Args[1], "--align=") {
 		AsciiArtJustify()
 		return
-	}else {
-		utility.PrintErr()
+	} else {
+		utility.PrintErrjustify()
 		return
 	}
 }

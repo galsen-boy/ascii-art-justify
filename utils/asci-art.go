@@ -8,14 +8,15 @@ import (
 
 func AsciiArt() {
 
-	if len(os.Args) < 2 || len(os.Args) > 4 || len(os.Args) == 1{
+	if len(os.Args) < 2 || len(os.Args) > 4 || len(os.Args) == 1 {
 		PrintErr()
 		return
 	}
 	//Recuperation du ficher testing
-	data, err := os.ReadFile("standard.txt")
+	data, err := os.ReadFile("./banner/" + "standard.txt")
 	if err != nil {
 		fmt.Println(err)
+		os.Exit(1)
 	}
 	//Traitement des arguments des parametre
 	arguments := strings.Split(os.Args[1], "\\n")

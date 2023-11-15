@@ -7,7 +7,7 @@ import (
 )
 
 func ConvertStr(str string) string {
-	data, err := os.ReadFile(os.Args[3] + ".txt")
+	data, err := os.ReadFile("./banner/"+os.Args[3] + ".txt")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -42,7 +42,7 @@ func ConvertStr(str string) string {
 // --------------------------------
 
 func TraiteFile(s []string) []string {
-	data, err := os.ReadFile(os.Args[2] + ".txt")
+	data, err := os.ReadFile("./banner/"+os.Args[2] + ".txt")
 	if err != nil {
 		fmt.Println(err)
 	}

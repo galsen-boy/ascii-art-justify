@@ -40,7 +40,7 @@ func AsciiArtJustify() {
 		fmt.Println("EX: go run . --align=right something standard")
 		os.Exit(0)
 	}
-	Content, err := os.ReadFile(os.Args[3] + ".txt")
+	Content, err := os.ReadFile("./banner/"+os.Args[3] + ".txt")
 	if err != nil {
 		fmt.Println("Usage: go run . [OPTION] [STRING] [BANNER]")
 		fmt.Println("EX: go run . --align=right something standard")
@@ -95,9 +95,6 @@ func AsciiArtJustify() {
 	// to obtain the length of the bubble word
 	startingPoint := 0
 	justifySpace := 0
-	// justifySpace is to obtain the number of space characters there are in the input string.
-	// this is necessary for the equation ((length - charlength) / justifySpace) so that
-	//the appropriate number of spaces is add after each space character to fill the terminal size.
 	var ind []int
 	/// ind is to obtain the index of the spaces. This is necessary for the justify alignment
 	if alignFlag[1] == "right" || alignFlag[1] == "left" || alignFlag[1] == "justify" || alignFlag[1] == "center" {

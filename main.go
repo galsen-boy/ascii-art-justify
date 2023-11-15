@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"main/utility"
+	"main/utils"
 	"os"
 	"strings"
 )
@@ -133,7 +133,7 @@ func AsciiArtColor() {
 func ReadBanner() {
 	banner := "standard.txt"
 	var tabB []string
-	scanner, err := ioutil.ReadFile(banner)
+	scanner, err := ioutil.ReadFile("./banner/"+banner)
 	if err != nil {
 		fmt.Println("Invalid banner")
 		return

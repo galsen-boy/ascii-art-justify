@@ -1,4 +1,16 @@
-Objectives
+
+<table align="center" border="0">
+  <tr>
+    <td><a href="https://imgbb.com/"><img src="https://i.ibb.co/tL6SpfD/zone01.png" alt="zone01" border="0" width="100px"></a></td>
+    <td><a href="https://imgbb.com/"><img src="https://i.ibb.co/W2vM8Ws/golang.png" alt="golang" border="0" width="120px"></a></td>
+   </tr>
+</table>
+<h1 align="center">ASCII-ART-JUSTIFY</h1>
+*  A small Go program that align ASCII art from a string input. 
+
+
+
+## Objectives
 
 You must follow the same instructions as in the first subject but the alignment can be changed.
 To change the alignment of the output it must be possible to use a flag --align=<type>, in which type can be :
@@ -17,23 +29,39 @@ To change the alignment of the output it must be possible to use a flag --align=
 
     The flag must have exactly the same format as above, any other formats must return the following usage message:
 
-Usage: go run . [OPTION] [STRING] [BANNER]
+## Installation
 
-Example: go run . --align=right something standard
+ - To use this program simple clone this Git repository on your local machine
 
-If there are other ascii-art optional projects implemented, the program should accept other correctly formatted [OPTION] and/or [BANNER].
-Additionally, the program must still be able to run with a single [STRING] argument.
-Instructions
+```bash
+  git clone https://learn.zone01dakar.sn/git/daiba/ascii-art-justify
+```
+-  Open Terminal and install go package
+```bash
+  apt install golang
+```
+-  Run program using the next command
+```bash
+  go run . [OPTION] [STRING]
+```
+- USAGE : 
+```bash 
+go run . "--align=left" "Hello"
+```
+```
+ _    _          _   _          $
+| |  | |        | | | |         $
+| |__| |   ___  | | | |   ___   $
+|  __  |  / _ \ | | | |  / _ \  $
+| |  | | |  __/ | | | | | (_) | $
+|_|  |_|  \___| |_| |_|  \___/  $
+                                $
+                                $ 
+```
+## Author
 
-    Your project must be written in Go.
-    The code must respect the good practices.
-    It is recommended to have test files for unit testing.
-Allowed packages
+- [@daiba](https://learn.zone01dakar.sn/git/daiba)
+- [@nifaye](https://learn.zone01dakar.sn/git/nifaye)
+- [@ymadicke](https://learn.zone01dakar.sn/git/ymadicke)
 
-    Only the standard Go packages are allowed.
-
-This project will help you learn about :
-
-    The Go file system(fs) API
-    Data manipulation
-    Terminal display
+![Logo](https://go.dev/images/go-logo-white.svg)

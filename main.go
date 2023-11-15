@@ -136,6 +136,7 @@ func ReadBanner() {
 	scanner, err := ioutil.ReadFile("./banner/"+banner)
 	if err != nil {
 		fmt.Println("Invalid banner")
+		os.Exit(1)
 		return
 	}
 	data := bufio.NewScanner(strings.NewReader(string(scanner)))

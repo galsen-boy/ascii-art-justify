@@ -44,7 +44,7 @@ func AsciiArtJustify() {
 	if err != nil {
 		fmt.Println("Usage: go run . [OPTION] [STRING] [BANNER]")
 		fmt.Println("EX: go run . --align=right something standard")
-		os.Exit(0)
+		os.Exit(1)
 	}
 	asciiSlice2 := make([][]string, 95)
 	// this stores the ascii-bubbles in order of the

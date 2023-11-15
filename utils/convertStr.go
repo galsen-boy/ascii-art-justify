@@ -10,6 +10,7 @@ func ConvertStr(str string) string {
 	data, err := os.ReadFile("./banner/"+os.Args[3] + ".txt")
 	if err != nil {
 		fmt.Println(err)
+		os.Exit(1)
 	}
 	dataSplit := strings.Split(string(data), "\n")
 	strTab := strings.Split(str, "\\n")
@@ -45,6 +46,7 @@ func TraiteFile(s []string) []string {
 	data, err := os.ReadFile("./banner/"+os.Args[2] + ".txt")
 	if err != nil {
 		fmt.Println(err)
+		os.Exit(1)
 	}
 	dataSplit := strings.Split(string(data), "\n")
 
